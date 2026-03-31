@@ -1,3 +1,162 @@
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #94a3b8;
+        }
+	.fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.6s ease;
+        }
+        .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+        @keyframes fadeIn {
+             to {
+             opacity: 1;
+             transform: translateY(0);
+             }
+        }
+       .delay1 { animation-delay: 0.2s; }
+       .delay2 { animation-delay: 0.4s; }
+       .delay3 { animation-delay: 0.6s; }
+      
+       .light-mode {
+            background: #f1f5f9;
+            color: black;
+       }
+
+       .light-mode nav {
+            background: #e2e8f0;
+       }
+
+       .light-mode .card {
+           background: #ffffff;
+           color: black;
+       }
+
+       .light-mode .skills span {
+           background: #0ea5e9;
+           color: white;
+       }
+       .sql { animation-delay: 0.2s; }
+.excel { animation-delay: 0.4s; }
+.powerbi { animation-delay: 0.6s; }
+.python { animation-delay: 0.8s; }
+.business { animation-delay: 1s; }
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+    .container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+html {
+    scroll-behavior: smooth;
+}
+
+    .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .skills span {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <button onclick="toggleMode()" class="btn" style="margin-left:20px;">
+    🌙 / ☀️
+    </button>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- HERO -->
+    <h1>Sonu Kumar</h1>
+    <h2 id="typing"></h2>
+    <p>Turning Data into Business Decisions</p>
+
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="https://linkedin.com/in/sonu-kumar-analytics" target="_blank" class="btn">LinkedIn</a>
+    <a href="https://drive.google.com/file/d/1TiEp9ek6aUfffIMJQrEsXaAtOeYurvrW/view?usp=sharing" class="btn" target="_blank">View Resume</a>
+
+    <!-- ABOUT -->
+    <div class="section fade-in delay1" id="about">
+        <h2>About Me</h2>
+        <p>
+            I analyze data using SQL, Excel, and Power BI to generate insights that help businesses make better decisions. 
+            I am passionate about solving real-world business problems and turning data into actionable strategies.
+        </p>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="section">
+    <h2>Skills</h2>
+
+    <h3>Technical Skills</h3>
+
+    <p>SQL</p>
+    <div class="skill-bar"><div class="skill sql"></div></div>
+
+    <p>Excel</p>
+    <div class="skill-bar"><div class="skill excel"></div></div>
 <!DOCTYPE html>
 <html>
 <head>
@@ -311,15 +470,17 @@ html {
         <h2>Projects</h2>
 
         <div class="card">
-            <h3>Coffee Business Expansion Analysis</h3>
+            <h3>Sales Performance Analysis Dashboard | Power BI, SQL, Excel</h3>
+		<p><strong>Tools:</strong> Power BI, SQL, Excel</p>
             <p>
-                Analyzed market data using SQL and Excel to identify the best city for business expansion. 
-                Evaluated demand, competition, and growth potential to provide data-driven recommendations.
+        Developed an interactive dashboard using Power BI to analyze sales performance across regions, categories, and cities. 
+        Identified key insights such as top-performing regions, profitable products, and low-profit areas to support business decision-making.
             </p>
 
-            <img src="project1.png" alt="Project Screenshot">
+        <img src="dashboard.png" alt="Sales Dashboard Screenshot">
 
-            <a href="https://github.com/sonu-kumar-analytics" target="_blank" class="btn">View Code</a>
+		<a href="https://github.com/sonu-kumar-analytics/sales-analysis-project" target="_blank" class="btn">
+        View Project</a>
         </div>
 
         <div class="card">
@@ -416,10 +577,5 @@ function checkScroll() {
 window.addEventListener("scroll", checkScroll);
 checkScroll();
 </script>
-
-</body>
-</html>
-</div>
-
 </body>
 </html>
